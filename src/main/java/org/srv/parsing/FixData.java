@@ -18,7 +18,7 @@ public class FixData {
 
     private Constructor constructor = null;
 
-    private com.bpsoft.ssapi.parsing.ClassData classData = null;
+    private ClassData classData = null;
 
     public FixData(String className) throws ClassNotFoundException {
         obj = Class.forName(className);
@@ -31,7 +31,7 @@ public class FixData {
 
         this.obj = obj;
 
-        classData = this.obj.getDeclaredAnnotation(com.bpsoft.ssapi.parsing.ClassData.class);
+        classData = this.obj.getDeclaredAnnotation(ClassData.class);
         //System.out.println("classData " + classData.length());
     }
 
